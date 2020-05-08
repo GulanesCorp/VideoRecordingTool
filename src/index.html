@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Screen Recorder</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+  />
+  <link rel="stylesheet" href="index.css" />
+  <script defer src="render.js"></script>
+</head>
+<body class="content">
+<h1>⚡ Simple Screen Recorder</h1>
+
+<video></video>
+<br>
+
+<button id="startBtn" class="button is-dark  ">Start</button>
+<button id="stopBtn" class="button is-danger  ">Stop</button>
+<button id="howToUse" class="button is-primary  "onclick="myFunction()">HowToUse</button>
+
+
+<hr/>
+
+<button id="videoSelectBtn" class="button is-text" >
+  Choose a Video Source
+</button>
+
+
+<script>
+  function myFunction() {
+    Swal.mixin({
+      confirmButtonText: 'Next &rarr;',
+      showCancelButton: true,
+      progressSteps: ['1', '2', '3','4']
+    }).queue([
+      {
+        text: 'Choose a Source Video '
+      }, {
+
+        text: 'Click Start to start Recording and Stop to stop Recording'
+      }, {
+
+        text: 'Name the file and Choose the Directory where to Save it'
+      }, {
+
+        text: 'Enjoy!'
+      }
+
+    ])
+  }
+</script>
+</body>
+</html>
