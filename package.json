@@ -19,7 +19,9 @@
   "license": "MIT",
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+        "icon": "/src/ico.jpg"
+      },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
